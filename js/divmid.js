@@ -11,7 +11,7 @@ var divmidmidiframe = new Vue({
                         x ="html/images.html";
                         break;
                     case 1:
-                        x ="html/two.html";
+                        x ="html/text.html";
                         break;
                     case 2:
                         x ="html/three.html";
@@ -47,4 +47,8 @@ window.onload = function () {
         };
     }
 
+    var midright = document.getElementById("div-mid-mid-iframe");
+    var midleft = document.getElementById("div-mid-left");
+    midright.style.width = (window.innerWidth- midleft.offsetWidth)+'px';
+    midright.style.height = (window.innerHeight-50)+'px';
 }

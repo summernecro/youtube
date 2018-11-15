@@ -1,5 +1,8 @@
+body{
+    margin-top: -4px;
+    padding-top: 0px;
+}
 #images{
-    padding-bottom: 50px;
 }
 .images-table-tr{
     height: 200px;
@@ -23,37 +26,7 @@
     box-shadow:0 0 1px #000;
 }
 #images-div{
-    height: 5%;
     overflow: hidden;
-}
-.images-top{
-    margin-top: 15px;
-    text-align: center;
-}
-
-.images-top-img{
-    width: 30px;
-    height: 30px;
-    vertical-align: middle;
-}
-#images-loading{
-  position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    display: block;
-}
-#images-loading-span{
-    line-height: 100px;
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    width: 100px;
-    height: 100px;
 }
 .images-table-tr-td-div-img-folder{
    position: absolute;
@@ -63,4 +36,13 @@
     height: 20px;
     margin-right: 5px;
     margin-bottom: 5px;
+}
+.images-table-tr-td-div-img-date{
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    height: 20px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    color: darkgrey;
 }

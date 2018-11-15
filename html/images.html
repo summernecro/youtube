@@ -4,44 +4,50 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="../lib/jquery-3.3.1.min.js"  type="text/javascript"></script>
     <link href="../css/images.css" rel="stylesheet">
+    <link href="../css/leftright.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body id="images">
 <div id="images-div">
     <table id="images-table">
-        <tr v-for="items in itemss" class="images-table-tr">
+        <tr v-for="a in itemss" class="images-table-tr">
             <td class="images-table-tr-td">
                 <div class="images-table-tr-td-div">
-                    <img  class="images-table-tr-td-div-img"  v-bind:src="items.items[0].path"  v-on:click="gotoImg($event)"/>
+                    <img  class="images-table-tr-td-div-img"  v-bind:src="a.items[0].path"  v-on:click="gotoImg($event)"/>
                     <img src="../image/folder.png"   class="images-table-tr-td-div-img-folder" v-on:click="gotoFolder($event)"/>
+                    <div class="images-table-tr-td-div-img-date">{{a.items[0].date}}</div>
                 </div>
             </td>
             <td class="images-table-tr-td">
                 <div class="images-table-tr-td-div">
-                    <img   class="images-table-tr-td-div-img" v-bind:src="items.items[1].path"  v-on:click="gotoImg($event)"/>
+                    <img   class="images-table-tr-td-div-img" v-bind:src="a.items[1].path"  v-on:click="gotoImg($event)"/>
                     <img src="../image/folder.png"   class="images-table-tr-td-div-img-folder" v-on:click="gotoFolder($event)"/>
-                </div>
-            </td>
-
-            <td class="images-table-tr-td">
-                <div class="images-table-tr-td-div">
-                    <img     class="images-table-tr-td-div-img" v-bind:src="items.items[2].path"  v-on:click="gotoImg($event)"/>
-                    <img src="../image/folder.png"   class="images-table-tr-td-div-img-folder" v-on:click="gotoFolder($event)"/>
+                    <div class="images-table-tr-td-div-img-date">{{a.items[1].date}}</div>
                 </div>
             </td>
 
             <td class="images-table-tr-td">
                 <div class="images-table-tr-td-div">
-                    <img    class="images-table-tr-td-div-img" v-bind:src="items.items[3].path"  v-on:click="gotoImg($event)"/>
+                    <img     class="images-table-tr-td-div-img" v-bind:src="a.items[2].path"  v-on:click="gotoImg($event)"/>
                     <img src="../image/folder.png"   class="images-table-tr-td-div-img-folder" v-on:click="gotoFolder($event)"/>
+                    <div class="images-table-tr-td-div-img-date">{{a.items[2].date}}</div>
                 </div>
             </td>
 
             <td class="images-table-tr-td">
                 <div class="images-table-tr-td-div">
-                    <img     class="images-table-tr-td-div-img" v-bind:src="items.items[4].path"  v-on:click="gotoImg($event)"/>
+                    <img    class="images-table-tr-td-div-img" v-bind:src="a.items[3].path"  v-on:click="gotoImg($event)"/>
                     <img src="../image/folder.png"   class="images-table-tr-td-div-img-folder" v-on:click="gotoFolder($event)"/>
+                    < <div class="images-table-tr-td-div-img-date">{{a.items[3].date}}</div>
+                </div>
+            </td>
+
+            <td class="images-table-tr-td">
+                <div class="images-table-tr-td-div">
+                    <img     class="images-table-tr-td-div-img" v-bind:src="a.items[4].path"  v-on:click="gotoImg($event)"/>
+                    <img src="../image/folder.png"   class="images-table-tr-td-div-img-folder" v-on:click="gotoFolder($event)"/>
+                    <div class="images-table-tr-td-div-img-date">{{a.items[4].date}}</div>
                 </div>
             </td>
         </tr>

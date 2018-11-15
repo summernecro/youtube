@@ -1,18 +1,22 @@
+function getDate(d) {
+    var date = new Date(d);
+    return date.getFullYear()+'-'+(date.getMonth()+1)+'-'+(date.getDate());
+}
 var images = new Vue({
     el:'#images-table',
     data:{
         itemss:[
             {
                 items : [
-                    {path:'http://222.186.36.75:8888/records/20180704/hdImg_8b438633165b0ade05acd6eea9c5b0ce1530701932157.jpg'},
-                    {path:'http://222.186.36.75:8888/records/20180704/hdImg_8b438633165b0ade05acd6eea9c5b0ce1530701932157.jpg'},
-                    {path:'http://222.186.36.75:8888/records/20180704/hdImg_8b438633165b0ade05acd6eea9c5b0ce1530701932157.jpg'},
-                    {path:'http://222.186.36.75:8888/records/20180704/hdImg_8b438633165b0ade05acd6eea9c5b0ce1530701932157.jpg'},
-                    {path:'http://222.186.36.75:8888/records/20180704/hdImg_8b438633165b0ade05acd6eea9c5b0ce1530701932157.jpg'}
+                    {path:'http://222.186.36.75:8888/records/20180704/hdImg_8b438633165b0ade05acd6eea9c5b0ce1530701932157.jpg',date:''},
+                    {path:'http://222.186.36.75:8888/records/20180704/hdImg_8b438633165b0ade05acd6eea9c5b0ce1530701932157.jpg',date:''},
+                    {path:'http://222.186.36.75:8888/records/20180704/hdImg_8b438633165b0ade05acd6eea9c5b0ce1530701932157.jpg',date:''},
+                    {path:'http://222.186.36.75:8888/records/20180704/hdImg_8b438633165b0ade05acd6eea9c5b0ce1530701932157.jpg',date:''},
+                    {path:'http://222.186.36.75:8888/records/20180704/hdImg_8b438633165b0ade05acd6eea9c5b0ce1530701932157.jpg',date:''}
                 ],
             }
         ],
-        index:0
+        index:1
     },
     methods:{
         getimages:function (num) {
@@ -30,26 +34,31 @@ var images = new Vue({
                     for(var i=0;i<data.data.length/5;i++){
                         if(data.data[i*5+0].netpath!=null){
                             var p0 = 'http://222.186.36.75:8888/records'+data.data[i*5+0].netpath.substring("E:\\record".length,data.data[i*5+0].netpath.length).replace("\\","/");
+                            var d0 = getDate(data.data[i*5+0].ctime);
                         }
                         if(data.data[i*5+1].netpath!=null){
                             var p1 = 'http://222.186.36.75:8888/records'+data.data[i*5+1].netpath.substring("E:\\record".length,data.data[i*5+1].netpath.length).replace("\\","/");
+                            var d1 = getDate(data.data[i*5+1].ctime);
                         }
                         if(data.data[i*5+2].netpath!=null){
                             var p2 = 'http://222.186.36.75:8888/records'+data.data[i*5+2].netpath.substring("E:\\record".length,data.data[i*5+2].netpath.length).replace("\\","/");
+                            var d2 = getDate(data.data[i*5+2].ctime);
                         }
                         if(data.data[i*5+3].netpath!=null){
                             var p3 = 'http://222.186.36.75:8888/records'+data.data[i*5+3].netpath.substring("E:\\record".length,data.data[i*5+3].netpath.length).replace("\\","/");
+                            var d3 = getDate(data.data[i*5+3].ctime);
                         }
                         if(data.data[i*5+4].netpath!=null){
                             var p4 = 'http://222.186.36.75:8888/records'+data.data[i*5+4].netpath.substring("E:\\record".length,data.data[i*5+4].netpath.length).replace("\\","/");
+                            var d4 = getDate(data.data[i*5+4].ctime);
                         }
                         images.itemss.push({
                             items:[
-                                {path:p0},
-                                {path:p1},
-                                {path:p2},
-                                {path:p3},
-                                {path:p4}
+                                {path:p0,date:d0},
+                                {path:p1,date:d1},
+                                {path:p2,date:d2},
+                                {path:p3,date:d3},
+                                {path:p4,date:d4},
                             ]
                         });
                     }

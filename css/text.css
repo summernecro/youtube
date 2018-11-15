@@ -1,0 +1,24 @@
+html{
+    height: 50%;
+}
+body{
+    margin-top: 10px;
+}
+#two-div{
+}
+.two-div-table-tr-td-div{
+    white-space:normal;
+    word-break:break-all;
+    word-wrap:break-word;
+    border-bottom: 1px solid gray;
+}
+.two-div-table-tr-td-line{
+    height: 1px;
+    background-color: black;
+}
+.two-div-table-tr-td{
+    position: relative;
+}
+.two-div-table-tr-td-date{
+    text-align: right;
+}
